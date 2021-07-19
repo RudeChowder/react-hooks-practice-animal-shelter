@@ -47,6 +47,8 @@ describe("Adopting pets", () => {
 
     fireEvent.click(button);
 
+    await screen.findAllByText(/Already adopted/);
+
     expect(button.textContent).toContain("Already adopted");
   });
 });
